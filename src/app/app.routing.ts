@@ -4,17 +4,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 import { DetailFilmComponent } from './pages/detail-film/detail-film.component';
 import { AppComponent } from './app.component';
-import { ListCardComponent } from './list-card/list-card.component';
+import { ListCardComponent } from './pages/list-card/list-card.component';
 import { PagesModule } from './pages/pages.module';
 
 const routes: Routes = [
   {
-    path: '',
-    component: ListCardComponent,
-    pathMatch: 'full'
+    path: '', redirectTo:'./PagesModule/ListCardComponent', pathMatch:'full'
   },
   {
-    path:'detail/film', redirectTo:'./PagesModule/DetailFilmComponent'
+    path:'detail/film', redirectTo:'./PagesModule/DetailFilmComponent', pathMatch:'full'
   }
 
 ];
