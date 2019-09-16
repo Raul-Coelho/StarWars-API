@@ -10,17 +10,23 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CardComponent } from './components/card/card.component';
 import { MatListModule } from '@angular/material/list';
+import { AppRoutingModule } from './app.routing';
+import { RouterModule } from '@angular/router';
+import { ListCardComponent } from './pages/list-card/list-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
     CardComponent,
+    NavbarComponent,
+    ListCardComponent,
   ],
   imports: [
   BrowserModule,
     BrowserAnimationsModule,
     MatListModule,
+    RouterModule,
+    AppRoutingModule,
     MDBBootstrapModule.forRoot(),
     FormsModule,
   ],
@@ -28,4 +34,3 @@ import { MatListModule } from '@angular/material/list';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-    
