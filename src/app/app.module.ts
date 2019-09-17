@@ -8,12 +8,13 @@ import { AppComponent } from './app.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { CardComponent } from './components/card/card.component';
+import { CardComponent } from './components/card-film/card.component';
 import { MatListModule } from '@angular/material/list';
 import { AppRoutingModule } from './app.routing';
 import { RouterModule } from '@angular/router';
 import { ListCardComponent } from './pages/list-card/list-card.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     FormsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports:[]
 })
 export class AppModule { }

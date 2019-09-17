@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ListCardComponent } from './pages/list-card/list-card.component';
 import { PagesModule } from './pages/pages.module';
 
+
 const routes: Routes = [
   {
     path: '', redirectTo:'./PagesModule/ListCardComponent', pathMatch:'full'
@@ -19,7 +20,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    CommonModule,
+  CommonModule,
     PagesModule,
     BrowserModule,
     RouterModule.forRoot(routes, {
