@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ConsumeService } from './consume.service';
+import { ConsumeService } from './consume-filme.service';
 
 describe('ConsumeService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
