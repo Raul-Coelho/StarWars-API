@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ConsumeService } from '../../services/consume.service';
-import { Film } from '../../Model/Film';
 import { HttpClient } from '@angular/common/http';
+import { Film } from 'src/app/Model/Film';
 
 @Component({
   selector: 'app-detail-film',
@@ -20,8 +20,11 @@ export class DetailFilmComponent implements OnInit {
 
   ngOnInit() {
     this.consume.read().then(
-      // res => this.film = res,
-      res => console.log(res)
+      res => {
+        this.film = res;
+      console.log(this.film);
+      }
+      
     ).catch((res) => console.log('Erro!:'+ res))
   }
 
