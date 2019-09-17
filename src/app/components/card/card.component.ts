@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { DetailFilmComponent } from 'src/app/pages/detail-film/detail-film.component';
 
 @Component({
   selector: 'app-card',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  constructor() { }
+  constructor(public router:Router) { }
 
   ngOnInit() {
+  
+  }
+
+  details(){
+    this.router.navigate(['detail/film']);
   }
 
 }
