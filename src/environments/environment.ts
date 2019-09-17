@@ -3,9 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-
-  // const API:string = 'https://swapi.co/api/films/',
-  production: false
+  production: false,
+  API: 'https://swapi.co/api/films'
 };
 
 /*
