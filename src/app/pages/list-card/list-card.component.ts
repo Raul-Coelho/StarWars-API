@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ConsumeService } from '../../services/consume.service';
+import { Film } from 'src/app/Model/Film';
 
 @Component({
   selector: 'app-list-card',
@@ -7,14 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListCardComponent implements OnInit {
 
-  public items:number[];
+  public films:Film[];
 
-  constructor() { }
+  constructor(private consumeService: ConsumeService) { 
+    
+  }
 
   ngOnInit() {
-    this.items = [
-      1,2,3,4,5,6
-    ];
+    this.consumeService.getFilms().then(
+      res => {
+        this.films = res['results'];
+        console.log(res['results'])
+      }
+    )
   }
 
 }
