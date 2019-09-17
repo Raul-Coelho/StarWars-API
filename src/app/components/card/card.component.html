@@ -12,15 +12,15 @@
           <mdb-card-body>
             <!--Title-->
             <mdb-card-title>
-              <h6>Boku no hero Academia</h6>
+              <h6>{{film.title}}</h6>
             </mdb-card-title>
   
             <!--Text-->
-            <mdb-card-text> Some quick example text to build on the card title and make up the bulk of the card's
-              content.
+            <mdb-card-text> 
+              {{film.opening_crawl}}
             </mdb-card-text>
   
-            <a (click)="details(item)" mdbBtn color="dark" mdbWavesEffect>Details</a>
+            <a (click)="details(film)" mdbBtn color="dark" mdbWavesEffect>Details</a>
           </mdb-card-body>
         </mdb-card>
 
