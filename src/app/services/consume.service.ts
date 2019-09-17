@@ -9,13 +9,17 @@ import { Film } from '../Model/Film';
 })
 export class ConsumeService {
 
-  private readonly API = `${environment.API}/1/`;
+  private readonly API = `${environment.API}`;
 
   constructor(private http: HttpClient) {
 
    }
 
   async read():Promise<Film>{
+    return await this.http.get<Film>(this.API).toPromise();
+  }
+
+  async getFilms():Promise<Film>{
     return await this.http.get<Film>(this.API).toPromise();
   }
 }
