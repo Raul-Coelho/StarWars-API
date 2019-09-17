@@ -3,6 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { DetailFilmComponent } from './detail-film/detail-film.component';
 import { ListCardComponent } from './list-card/list-card.component';
+import { MatListModule } from '@angular/material/list';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { AppModule } from '../app.module';
+
+
+
+
 
 
 
@@ -17,10 +24,15 @@ const routes: Routes = [
 
 
 @NgModule({
-  declarations: [DetailFilmComponent],
+  declarations: [
+    DetailFilmComponent,
+
+  ],
   imports: [
     CommonModule,
     RouterModule,
+    MatListModule,
+    MDBBootstrapModule.forRoot(),
     RouterModule.forChild(routes)
   ],
   exports: [RouterModule]

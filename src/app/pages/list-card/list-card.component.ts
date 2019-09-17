@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ConsumeService } from '../../services/consume.service';
+import { ConsumeService } from '../../services/consume-filme.service';
 import { Film } from 'src/app/Model/Film';
+import { ConsumeCharactersService } from '../../services/consume-characters.service';
+import { People } from '../../Model/People';
 
 @Component({
   selector: 'app-list-card',
@@ -11,7 +13,7 @@ export class ListCardComponent implements OnInit {
 
   public films:Film[];
 
-  constructor(private consumeService: ConsumeService) { 
+  constructor(private consumeService: ConsumeService,private charactersService:ConsumeCharactersService) { 
     
   }
 
@@ -19,7 +21,6 @@ export class ListCardComponent implements OnInit {
     this.consumeService.getFilms().then(
       res => {
         this.films = res['results'];
-        console.log(res['results'])
       }
     )
   }
