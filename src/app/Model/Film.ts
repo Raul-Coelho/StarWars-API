@@ -1,3 +1,5 @@
+import { People } from './People';
+
 export class Film{
     constructor(
         public characters: string[],
