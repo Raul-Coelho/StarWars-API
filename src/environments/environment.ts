@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  API: 'https://swapi.co/api/films'
+  API: 'https://swapi.co/api',
+  API_CHARAC: ''
 };
 
 /*
