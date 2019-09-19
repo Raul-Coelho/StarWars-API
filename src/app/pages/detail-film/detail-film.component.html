@@ -46,6 +46,32 @@
                         </mdb-card>
                     </mdb-carousel-item>
                 </mdb-carousel>
+
+                <h4 class="pr-3 ml-5">Planets</h4>
+                <mdb-carousel class="w-50 mb-5" color="black" [animation]="'slide'">
+                    <mdb-carousel-item *ngFor="let planet of planets">
+                        <mdb-card class="color col-md-12 ml-1 mb-6 mt-3">
+                            <!--Card content-->
+                            <mdb-card-body>
+                                <!--Title-->
+                                <mdb-card-title class="center">
+                                    <h5>{{planet.name}}</h5>
+                                </mdb-card-title>
+
+                                <!--Text-->
+                                <mdb-card-text>
+                                    <h6>Gravity: {{planet.gravity}}</h6>
+                                </mdb-card-text>
+                                <mdb-card-text>
+                                    <h6>Popuation: {{planet.population}}</h6>
+                                </mdb-card-text>
+                                <mdb-card-text>
+                                    <h6>Climate: {{planet.climate}}</h6>
+                                </mdb-card-text>
+                            </mdb-card-body>
+                        </mdb-card>
+                    </mdb-carousel-item>
+                </mdb-carousel>
             </mdb-card>
         </div>
     </div>
