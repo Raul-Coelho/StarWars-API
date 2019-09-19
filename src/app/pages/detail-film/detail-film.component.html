@@ -106,26 +106,26 @@
 
                 <div class="row">
                     <div class="col-6">
-                        <h4 class="pr-3 ml-8">Species</h4>
+                        <h4 class="pr-3 ml-8">Vehicles</h4>
                         <mdb-carousel class="w-100 mb-5" color="black" [animation]="'slide'">
-                            <mdb-carousel-item *ngFor="let specie of species">
+                            <mdb-carousel-item *ngFor="let vehicle of vehicles">
                                 <mdb-card class="color col-md-12 ml-1 mb-6 mt-3 rounded mb-0 tamanho">
                                     <!--Card content-->
                                     <mdb-card-body>
                                         <!--Title-->
                                         <mdb-card-title class="center">
-                                            <h5>{{specie.name}}</h5>
+                                            <h5>{{vehicle.name}}</h5>
                                         </mdb-card-title>
 
                                         <!--Text-->
                                         <mdb-card-text>
-                                            <h6>Classification: {{specie.classification}}</h6>
+                                            <h6>Model: {{vehicle.model}}</h6>
                                         </mdb-card-text>
                                         <mdb-card-text>
-                                            <h6>Language: {{specie.language}}</h6>
+                                            <h6>Vehicle Class: {{vehicle.vehicle_class}}</h6>
                                         </mdb-card-text>
                                         <mdb-card-text>
-                                            <h6>Designation: {{specie.designation}}</h6>
+                                            <h6>Max Atmosphering Speed: {{vehicle.max_atmosphering_speed}}</h6>
                                         </mdb-card-text>
                                     </mdb-card-body>
                                 </mdb-card>
@@ -152,7 +152,7 @@
                                             <h6>Passengers: {{starship.passengers}}</h6>
                                         </mdb-card-text>
                                         <mdb-card-text>
-                                            <h6>Starship_class: {{starship.starship_class}}</h6>
+                                            <h6>Starship Class: {{starship.starship_class}}</h6>
                                         </mdb-card-text>
                                     </mdb-card-body>
                                 </mdb-card>

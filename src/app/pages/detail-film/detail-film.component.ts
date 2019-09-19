@@ -11,6 +11,8 @@ import { ConsumeSpeciesService } from '../../services/consume-species.service';
 import { Specie } from '../../Model/Specie';
 import { ConsumeStarshipsService } from '../../services/consume-starships.service';
 import { Starships } from '../../Model/Starships';
+import { ConsumeVehiclesService } from 'src/app/services/consume-vehicles.service';
+import { Vehicle } from '../../Model/Vehicle';
 
 @Component({
   selector: 'app-detail-film',
@@ -24,6 +26,7 @@ export class DetailFilmComponent implements OnInit {
   public planets: Planet[];
   public species: Specie[];
   public starships: Starships[];
+  public vehicles: Vehicle[];
   public headers: Headers;
   public nav: any;
 
@@ -33,6 +36,7 @@ export class DetailFilmComponent implements OnInit {
     private consumeCharactersService: ConsumeCharactersService,
     private consumeSpeciesService: ConsumeSpeciesService,
     private consumeStarshipsService: ConsumeStarshipsService,
+    private consumeVehiclesService: ConsumeVehiclesService,
     private http: HttpClient,
     private router: Router,
   ) {
@@ -72,6 +76,13 @@ export class DetailFilmComponent implements OnInit {
       this.starships = res;
       console.log(this.starships);
     }).catch(res =>{
+      console.log
+    })
+
+    this.consumeVehiclesService.getVehicles(this.film['vehicles']).then(res =>{
+      this.vehicles = res;
+      console.log(this.vehicles)
+    }).catch(res => {
       console.log
     })
   }
