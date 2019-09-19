@@ -1,4 +1,4 @@
-export class Starships{
+export class Vehicle{
     constructor(
         public name: string,
         public model: string,
@@ -10,10 +10,8 @@ export class Starships{
         public passengers: string,
         public cargo_capacity: string,
         public consumables:string,
-        public hyperdrive_rating:string,
-        public MGLT: string,
-        public starship_class: string,
-        public pilots: string[],
+        public vehicle_class:string,
+        public pilots: string,
         public films: string[],
         public created: string,
         public edited: string,
