@@ -2,13 +2,13 @@
     <div class="row">
         <div class="col-12 ">
             <mdb-card class="col-md-12 mt-3 h-100">
-                <!-- <div class="view rgba-white-slight waves-light" mdbWavesEffect>
-                    <mdb-card-img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+                <div class="view rgba-white-slight waves-light" mdbWavesEffect>
+                    <mdb-card-img src="../../assets/img/wallp.jpg"
                         alt="Card image cap"></mdb-card-img>
                     <a>
                         <div class="mask"></div>
                     </a>
-                </div> -->
+                </div>
                 <!--Card content-->
                 <mdb-card-body>
                     <!--Title-->
@@ -21,57 +21,62 @@
                         {{film.opening_crawl}}
                     </mdb-card-text>
                 </mdb-card-body>
-                <h4 class="pr-3 ml-5">Characters</h4>
-                <mdb-carousel class="w-50 mb-5" color="black" [animation]="'slide'">
-                    <mdb-carousel-item *ngFor="let chart of characters">
-                        <mdb-card class="color col-md-12 ml-1 mb-6 mt-3">
-                            <!--Card content-->
-                            <mdb-card-body>
-                                <!--Title-->
-                                <mdb-card-title class="center">
-                                    <h5>{{chart.name}}</h5>
-                                </mdb-card-title>
+                <div class="row">
+                    <div class="col-3">
+                        <h4 class="ml-6">Characters</h4>
+                        <mdb-carousel class="w-100 mb-5" color="black" [animation]="'slide'">
+                            <mdb-carousel-item *ngFor="let chart of characters">
+                                <mdb-card class="color col-md-12 ml-1 mb-6 mt-3 rounded mb-0 tamanho">
+                                    <!--Card content-->
+                                    <mdb-card-body>
+                                        <!--Title-->
+                                        <mdb-card-title class="center">
+                                            <h5>{{chart.name}}</h5>
+                                        </mdb-card-title>
 
-                                <!--Text-->
-                                <mdb-card-text>
-                                    <h6>Birth Year: {{chart.birth_year}}</h6>
-                                </mdb-card-text>
-                                <mdb-card-text>
-                                    <h6>Gender: {{chart.gender}}</h6>
-                                </mdb-card-text>
-                                <mdb-card-text>
-                                    <h6>Eye Color: {{chart.eye_color}}</h6>
-                                </mdb-card-text>
-                            </mdb-card-body>
-                        </mdb-card>
-                    </mdb-carousel-item>
-                </mdb-carousel>
+                                        <!--Text-->
+                                        <mdb-card-text>
+                                            <h6>Birth Year: {{chart.birth_year}}</h6>
+                                        </mdb-card-text>
+                                        <mdb-card-text>
+                                            <h6>Gender: {{chart.gender}}</h6>
+                                        </mdb-card-text>
+                                        <mdb-card-text>
+                                            <h6>Eye Color: {{chart.eye_color}}</h6>
+                                        </mdb-card-text>
+                                    </mdb-card-body>
+                                </mdb-card>
+                            </mdb-carousel-item>
+                        </mdb-carousel>
+                    </div>
+                    <div class="col-3">
+                        <h4 class="pr-3 ml-7">Planets</h4>
+                        <mdb-carousel class="w-100 mb-5" color="black" [animation]="'slide'">
+                            <mdb-carousel-item *ngFor="let planet of planets">
+                                <mdb-card class="color col-md-12 ml-1 mb-6 mt-3 rounded mb-0 tamanho">
+                                    <!--Card content-->
+                                    <mdb-card-body>
+                                        <!--Title-->
+                                        <mdb-card-title class="center">
+                                            <h5>{{planet.name}}</h5>
+                                        </mdb-card-title>
 
-                <h4 class="pr-3 ml-5">Planets</h4>
-                <mdb-carousel class="w-50 mb-5" color="black" [animation]="'slide'">
-                    <mdb-carousel-item *ngFor="let planet of planets">
-                        <mdb-card class="color col-md-12 ml-1 mb-6 mt-3">
-                            <!--Card content-->
-                            <mdb-card-body>
-                                <!--Title-->
-                                <mdb-card-title class="center">
-                                    <h5>{{planet.name}}</h5>
-                                </mdb-card-title>
-
-                                <!--Text-->
-                                <mdb-card-text>
-                                    <h6>Gravity: {{planet.gravity}}</h6>
-                                </mdb-card-text>
-                                <mdb-card-text>
-                                    <h6>Popuation: {{planet.population}}</h6>
-                                </mdb-card-text>
-                                <mdb-card-text>
-                                    <h6>Climate: {{planet.climate}}</h6>
-                                </mdb-card-text>
-                            </mdb-card-body>
-                        </mdb-card>
-                    </mdb-carousel-item>
-                </mdb-carousel>
+                                        <!--Text-->
+                                        <mdb-card-text>
+                                            <h6>Gravity: {{planet.gravity}}</h6>
+                                        </mdb-card-text>
+                                        <mdb-card-text>
+                                            <h6>Popuation: {{planet.population}}</h6>
+                                        </mdb-card-text>
+                                        <mdb-card-text>
+                                            <h6>Climate: {{planet.climate}}</h6>
+                                        </mdb-card-text>
+                                    </mdb-card-body>
+                                </mdb-card>
+                            </mdb-carousel-item>
+                        </mdb-carousel>
+                    </div>
+                </div>
             </mdb-card>
         </div>
     </div>
