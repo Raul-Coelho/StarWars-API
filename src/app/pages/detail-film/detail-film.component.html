@@ -3,8 +3,7 @@
         <div class="col-12 ">
             <mdb-card class="col-md-12 mt-3 h-100">
                 <div class="view rgba-white-slight waves-light" mdbWavesEffect>
-                    <mdb-card-img src="../../assets/img/wallp.jpg"
-                        alt="Card image cap"></mdb-card-img>
+                    <mdb-card-img src="../../assets/img/wallp.jpg" alt="Card image cap"></mdb-card-img>
                     <a>
                         <div class="mask"></div>
                     </a>
@@ -22,7 +21,7 @@
                     </mdb-card-text>
                 </mdb-card-body>
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-4">
                         <h4 class="ml-6">Characters</h4>
                         <mdb-carousel class="w-100 mb-5" color="black" [animation]="'slide'">
                             <mdb-carousel-item *ngFor="let chart of characters">
@@ -49,7 +48,7 @@
                             </mdb-carousel-item>
                         </mdb-carousel>
                     </div>
-                    <div class="col-3">
+                    <div class="col-4">
                         <h4 class="pr-3 ml-7">Planets</h4>
                         <mdb-carousel class="w-100 mb-5" color="black" [animation]="'slide'">
                             <mdb-carousel-item *ngFor="let planet of planets">
@@ -70,6 +69,90 @@
                                         </mdb-card-text>
                                         <mdb-card-text>
                                             <h6>Climate: {{planet.climate}}</h6>
+                                        </mdb-card-text>
+                                    </mdb-card-body>
+                                </mdb-card>
+                            </mdb-carousel-item>
+                        </mdb-carousel>
+                    </div>
+                    <div class="col-4">
+                        <h4 class="pr-3 ml-8">Species</h4>
+                        <mdb-carousel class="w-100 mb-5" color="black" [animation]="'slide'">
+                            <mdb-carousel-item *ngFor="let specie of species">
+                                <mdb-card class="color col-md-12 ml-1 mb-6 mt-3 rounded mb-0 tamanho">
+                                    <!--Card content-->
+                                    <mdb-card-body>
+                                        <!--Title-->
+                                        <mdb-card-title class="center">
+                                            <h5>{{specie.name}}</h5>
+                                        </mdb-card-title>
+
+                                        <!--Text-->
+                                        <mdb-card-text>
+                                            <h6>Classification: {{specie.classification}}</h6>
+                                        </mdb-card-text>
+                                        <mdb-card-text>
+                                            <h6>Language: {{specie.language}}</h6>
+                                        </mdb-card-text>
+                                        <mdb-card-text>
+                                            <h6>Designation: {{specie.designation}}</h6>
+                                        </mdb-card-text>
+                                    </mdb-card-body>
+                                </mdb-card>
+                            </mdb-carousel-item>
+                        </mdb-carousel>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-6">
+                        <h4 class="pr-3 ml-8">Species</h4>
+                        <mdb-carousel class="w-100 mb-5" color="black" [animation]="'slide'">
+                            <mdb-carousel-item *ngFor="let specie of species">
+                                <mdb-card class="color col-md-12 ml-1 mb-6 mt-3 rounded mb-0 tamanho">
+                                    <!--Card content-->
+                                    <mdb-card-body>
+                                        <!--Title-->
+                                        <mdb-card-title class="center">
+                                            <h5>{{specie.name}}</h5>
+                                        </mdb-card-title>
+
+                                        <!--Text-->
+                                        <mdb-card-text>
+                                            <h6>Classification: {{specie.classification}}</h6>
+                                        </mdb-card-text>
+                                        <mdb-card-text>
+                                            <h6>Language: {{specie.language}}</h6>
+                                        </mdb-card-text>
+                                        <mdb-card-text>
+                                            <h6>Designation: {{specie.designation}}</h6>
+                                        </mdb-card-text>
+                                    </mdb-card-body>
+                                </mdb-card>
+                            </mdb-carousel-item>
+                        </mdb-carousel>
+                    </div>
+                    <div class="col-6">
+                        <h4 class="pr-3 ml-8">Starships</h4>
+                        <mdb-carousel class="w-100 mb-5" color="black" [animation]="'slide'">
+                            <mdb-carousel-item *ngFor="let starship of starships">
+                                <mdb-card class="color col-md-12 ml-1 mb-6 mt-3 rounded mb-0 tamanho">
+                                    <!--Card content-->
+                                    <mdb-card-body>
+                                        <!--Title-->
+                                        <mdb-card-title class="center">
+                                            <h5>{{starship.name}}</h5>
+                                        </mdb-card-title>
+
+                                        <!--Text-->
+                                        <mdb-card-text>
+                                            <h6>Model: {{starship.model}}</h6>
+                                        </mdb-card-text>
+                                        <mdb-card-text>
+                                            <h6>Passengers: {{starship.passengers}}</h6>
+                                        </mdb-card-text>
+                                        <mdb-card-text>
+                                            <h6>Starship_class: {{starship.starship_class}}</h6>
                                         </mdb-card-text>
                                     </mdb-card-body>
                                 </mdb-card>
