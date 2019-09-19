@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { ConsumeCharactersService } from '../../services/consume-characters.service';
 import { People } from '../../Model/People';
 import { ConsumePlanetsService } from '../../services/consume-planets.service';
-import { Planets } from 'src/app/Model/Planets';
+import { Planet } from '../../Model/Planet';
 
 @Component({
   selector: 'app-detail-film',
@@ -17,7 +17,7 @@ export class DetailFilmComponent implements OnInit {
 
   public film:Film;
   public characters:People[];
-  public planets: Planets;
+  public planets: Planet[];
   public headers: Headers;
   public nav:any;
 

@@ -1,4 +1,4 @@
-export class People{
+export class Planet{
     constructor(
         
         public name: string,
