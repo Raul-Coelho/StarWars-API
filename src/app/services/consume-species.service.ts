@@ -16,7 +16,7 @@ export class ConsumeSpeciesService {
 
   constructor(private http:HttpClient) { }
 
-  async getPlanets(speciesArray:string[]){
+  async getSpecies(speciesArray:string[]){
     this.species = [];
     speciesArray.forEach(async element => {
       this.NEXT = element
