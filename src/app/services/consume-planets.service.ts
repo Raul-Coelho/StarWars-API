@@ -17,9 +17,9 @@ export class ConsumePlanetsService {
 
   constructor(private http:HttpClient) { }
 
-  async getPlanets(charactersArray:string[]){
+  async getPlanets(planetsArray:string[]){
     this.characters = [];
-    charactersArray.forEach(async element => {
+    planetsArray.forEach(async element => {
       this.NEXT = element
       await this.http.get<Planet>(this.NEXT).toPromise().then(retorno =>{
         this.characters.push(retorno);
