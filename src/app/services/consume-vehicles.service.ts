@@ -16,9 +16,9 @@ export class ConsumeVehiclesService {
 
   constructor(private http:HttpClient) { }
 
-  async getVehicles(starshipsArray:string[]){
+  async getVehicles(vehiclesArray:string[]){
     this.vehicle = [];
-    starshipsArray.forEach(async element => {
+    vehiclesArray.forEach(async element => {
       this.NEXT = element
       await this.http.get<Vehicle>(this.NEXT).toPromise().then(retorno =>{
         this.vehicle.push(retorno);
