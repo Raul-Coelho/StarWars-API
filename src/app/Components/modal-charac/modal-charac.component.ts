@@ -49,7 +49,7 @@ export class ModalCharacComponent implements OnInit {
       this.people['vehicles'] = res;
       console.log(this.people['vehicles'])
     }).catch(res =>{
-      console.log("Não POssui veiculo")
+      console.log("Não Possui veiculo")
     })
 
     this.consumePlanetsService.getSpecified(this.people['homeworld']).then(res =>{
