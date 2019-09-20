@@ -10,6 +10,7 @@ import { Planet } from 'src/app/Model/Planet';
 export class ConsumePlanetsService {
 
   public characters:Planet[];
+  public planetName:string;
 
   private readonly API = `${environment.API}/planets/`;
 
@@ -28,5 +29,15 @@ export class ConsumePlanetsService {
       })
     });
     return this.characters;
+  }
+
+  async getSpecified(planetSpecified:string){
+    this.NEXT = planetSpecified;
+      await this.http.get<string>(this.NEXT).toPromise().then(retorno =>{
+        return this.planetName = retorno
+      }).catch(erro =>{
+        console.log
+      })
+    return this.planetName;
   }
 }
