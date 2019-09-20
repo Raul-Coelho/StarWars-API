@@ -10,7 +10,7 @@ import { Film } from 'src/app/Model/Film';
 })
 export class CardComponent implements OnInit {
 
-  @Input() film = Film;
+  @Input() film:Film;
 
   constructor(public router:Router) { }
 
