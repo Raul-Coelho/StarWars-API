@@ -14,6 +14,11 @@ import { Starships } from '../../Model/Starships';
 import { ConsumeVehiclesService } from 'src/app/services/consume-vehicles.service';
 import { Vehicle } from '../../Model/Vehicle';
 
+import Swal from 'sweetalert2'
+import { MDBModalService, MDBModalRef } from 'angular-bootstrap-md';
+import { ModalCharacComponent } from 'src/app/Components/modal-charac/modal-charac.component';
+
+
 @Component({
   selector: 'app-detail-film',
   templateUrl: './detail-film.component.html',
@@ -23,12 +28,15 @@ export class DetailFilmComponent implements OnInit {
 
   public film: Film;
   public characters: People[];
+  public chart:People;
   public planets: Planet[];
   public species: Specie[];
   public starships: Starships[];
   public vehicles: Vehicle[];
   public headers: Headers;
   public nav: any;
+
+  modalRef: MDBModalRef;
 
   constructor(
     private consume: ConsumeService,
@@ -37,8 +45,10 @@ export class DetailFilmComponent implements OnInit {
     private consumeSpeciesService: ConsumeSpeciesService,
     private consumeStarshipsService: ConsumeStarshipsService,
     private consumeVehiclesService: ConsumeVehiclesService,
+    public modalService: MDBModalService,
     private http: HttpClient,
     private router: Router,
+
   ) {
     this.headers = new Headers();
     this.headers.append('Content-Type', 'application/json');
@@ -48,40 +58,50 @@ export class DetailFilmComponent implements OnInit {
 
   }
 
+  openModal(recivedChart:People){
+    this.modalRef = this.modalService.show(ModalCharacComponent, {
+        backdrop: true,
+        keyboard: true,
+        focus: true,
+        show: false,
+        ignoreBackdropClick: false,
+        class: 'modal-side modal-top-right',
+        containerClass: 'right',
+        animated: true,
+        data: {
+          heading: 'Character',
+          people: recivedChart      }
+    });
+  }
 
   ngOnInit() {
     this.film = this.nav.extras.state.selectedFilm;
     this.consumeCharactersService.getCharacters(this.film['characters']).then(res => {
       this.characters = res;
-      console.log(this.characters)
     }).catch(res =>{
       console.log
     })
 
     this.consumePlanetsService.getPlanets(this.film['planets']).then(res => {
       this.planets = res;
-      console.log(this.planets)
     }).catch(res =>{
       console.log
     })
 
     this.consumeSpeciesService.getSpecies(this.film['species']).then(res =>{
       this.species = res;
-      console.log(this.species)
     }).catch(res =>{
       console.log
     })
 
     this.consumeStarshipsService.getStarships(this.film['starships']).then(res =>{
       this.starships = res;
-      console.log(this.starships);
     }).catch(res =>{
       console.log
     })
 
     this.consumeVehiclesService.getVehicles(this.film['vehicles']).then(res =>{
       this.vehicles = res;
-      console.log(this.vehicles)
     }).catch(res => {
       console.log
     })
