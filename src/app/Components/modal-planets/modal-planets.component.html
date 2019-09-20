@@ -1,0 +1,39 @@
+<div class="modal-header">
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">×</span>
+    </button>
+    <h4 class="modal-title w-100" id="myModalLabel">{{heading}}</h4>
+  </div>
+  <div class="modal-body">
+    <h6><b>Name:</b> {{ planet.name }}</h6>
+    <h6><b>Rotation Period:</b> {{ planet.rotation_period }}</h6>
+    
+    <h6><b>Orbital Period:</b> {{ planet.orbital_period }}</h6>
+    <h6 (click)="films.toggle()" >
+      <b>Films</b>
+      <mdb-icon fas icon="angle-down"></mdb-icon>
+    </h6>
+    
+    <div class="" mdbCollapse  #films="bs-collapse">
+      <p *ngFor="let planet of planet.films"><b>Title:</b> {{planet.title}}</p>      
+    </div>
+    <h6 (click)="starships.toggle()">
+        <b>Residents</b>
+        <mdb-icon fas icon="angle-down"></mdb-icon>
+      </h6>
+      
+      <div class="" mdbCollapse #starships="bs-collapse">
+        <p *ngFor="let resident of planet.residents"><b>Name:</b> {{resident.name}}</p>      
+      </div>
+    <h6><b>Diameter:</b> {{ planet.diameter }}</h6>
+    <h6><b>Climate:</b> {{ planet.climate }}</h6>
+    <h6><b>Gravity:</b> {{ planet.gravity}}</h6>
+    <h6><b>Terrain:</b> {{ planet.terrain }}</h6>
+    <h6><b>Surface Water:</b> {{ planet.surface_water }}</h6>
+    <h6><b>Population:</b> {{ planet.population }}</h6>
+    
+    
+  </div>
+  <div class="modal-footer">
+    <button type="button" mdbBtn color="black" class="waves-light" aria-label="Close" (click)="modalRef.hide()" mdbWavesEffect>Close</button>
+  </div>
