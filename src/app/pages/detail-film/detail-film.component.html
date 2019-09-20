@@ -36,7 +36,7 @@
                         <h4 class="ml-7">Characters</h4>
                         <mdb-carousel class="w-100 mb-5" color="black" [animation]="'slide'">
                             <mdb-carousel-item *ngFor="let chart of characters">
-                                <app-card-characters (click)="openModal(chart)" class="col-md-12 ml-1 mb-6 mt-3 rounded mb-0 tamanho" [chart]="chart" ></app-card-characters>
+                                <app-card-characters (click)="openModalChart(chart)" class="col-md-12 ml-1 mb-6 mt-3 rounded mb-0 tamanho" [chart]="chart" ></app-card-characters>
                             </mdb-carousel-item>
                         </mdb-carousel>
                     </div>

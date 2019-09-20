@@ -58,7 +58,7 @@ export class DetailFilmComponent implements OnInit {
 
   }
 
-  openModal(recivedChart:People){
+  openModalChart(recivedChart:People){
     this.modalRef = this.modalService.show(ModalCharacComponent, {
         backdrop: true,
         keyboard: true,
