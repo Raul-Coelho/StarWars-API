@@ -13,7 +13,7 @@
     </h6>
     
     <div class="" mdbCollapse #species="bs-collapse">
-      <p *ngFor="let specie of people.species"><b>Title:</b> {{specie.name}}</p>      
+      <p *ngFor="let specie of people.species"><b>Name:</b> {{specie.name}}</p>      
     </div>
     <h6><b>Gender:</b> {{ people.gender }}</h6>
     <h6 (click)="films.toggle()" >
@@ -35,7 +35,7 @@
       </h6>
       
       <div class="" mdbCollapse #starships="bs-collapse">
-        <p *ngFor="let starship of people.starships"><b>Title:</b> {{starship.name}}</p>      
+        <p *ngFor="let starship of people.starships"><b>Name:</b> {{starship.name}}</p>      
       </div>
     
   </div>
