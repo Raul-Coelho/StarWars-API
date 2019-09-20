@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { FormsModule } from '@angular/forms';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { CardComponent } from './components/card-film/card.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
+import { CardComponent } from './Components/card-film/card.component';
 import { MatListModule } from '@angular/material/list';
 import { AppRoutingModule } from './app.routing';
 import { RouterModule } from '@angular/router';
 import { ListCardComponent } from './pages/list-card/list-card.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MatButtonModule, MatDialogModule } from '@angular/material';
+import { ModalCharacComponent } from './Components/modal-charac/modal-charac.component';
 
 
 @NgModule({
@@ -24,11 +26,13 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     ListCardComponent,
   ],
   imports: [
-BrowserModule,
-    BrowserAnimationsModule,
     MatListModule,
     HttpClientModule,
     RouterModule,
+    BrowserAnimationsModule,
+    BrowserModule,
+    MatDialogModule,
+    BrowserModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
     FormsModule,

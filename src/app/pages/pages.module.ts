@@ -5,12 +5,15 @@ import { DetailFilmComponent } from './detail-film/detail-film.component';
 import { ListCardComponent } from './list-card/list-card.component';
 import { MatListModule } from '@angular/material/list';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { AppModule } from '../app.module';
-import { CardCharactersComponent } from '../components/card-characters/card-characters.component';
-import { CardPlanetsComponent } from '../components/card-planets/card-planets.component';
-import { CardSpeciesComponent } from '../components/card-species/card-species.component';
-import { CardVehiclesComponent } from '../components/card-vehicles/card-vehicles.component';
-import { CardStarshipsComponent } from '../components/card-starships/card-starships.component';
+import { CardCharactersComponent } from '../Components/card-characters/card-characters.component';
+import { CardPlanetsComponent } from '../Components/card-planets/card-planets.component';
+import { CardSpeciesComponent } from '../Components/card-species/card-species.component';
+import { CardVehiclesComponent } from '../Components/card-vehicles/card-vehicles.component';
+import { CardStarshipsComponent } from '../Components/card-starships/card-starships.component';
+import { MatDialogModule } from '@angular/material';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ModalCharacComponent } from 'src/app/Components/modal-charac/modal-charac.component';
+
 
 
 
@@ -32,16 +35,25 @@ const routes: Routes = [
     CardSpeciesComponent,
     CardVehiclesComponent,
     CardStarshipsComponent,
+    ModalCharacComponent,
 
   ],
   imports: [
   CommonModule,
     RouterModule,
     MatListModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
     MDBBootstrapModule.forRoot(),
     RouterModule.forChild(routes)
   ],
-  exports: [RouterModule]
+  entryComponents:[
+    ModalCharacComponent
+  ],
+  exports: [RouterModule],
+  providers:[
+    
+  ]
 })
 
 export class PagesModule { }
