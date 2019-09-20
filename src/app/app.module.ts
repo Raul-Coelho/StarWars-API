@@ -13,10 +13,8 @@ import { MatListModule } from '@angular/material/list';
 import { AppRoutingModule } from './app.routing';
 import { RouterModule } from '@angular/router';
 import { ListCardComponent } from './pages/list-card/list-card.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { MatButtonModule, MatDialogModule } from '@angular/material';
-import { ModalCharacComponent } from './Components/modal-charac/modal-charac.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { MatDialogModule } from '@angular/material';
 
 @NgModule({
   declarations: [

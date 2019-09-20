@@ -44,7 +44,7 @@
                         <h4 class="pr-3 ml-7">Planets</h4>
                         <mdb-carousel class="w-100 mb-5" color="black" [animation]="'slide'">
                             <mdb-carousel-item *ngFor="let planet of planets">
-                                <app-card-planets class="col-md-12 ml-1 mb-6 mt-3 rounded mb-0 tamanho" [planet]="planet" ></app-card-planets>
+                                <app-card-planets (click)="openModalPlanet(planet)" class="col-md-12 ml-1 mb-6 mt-3 rounded mb-0 tamanho" [planet]="planet" ></app-card-planets>
                             </mdb-carousel-item>
                         </mdb-carousel>
                     </div>
@@ -52,7 +52,7 @@
                         <h4 class="pr-3 ml-8">Species</h4>
                         <mdb-carousel class="w-100 mb-5" color="black" [animation]="'slide'">
                             <mdb-carousel-item *ngFor="let specie of species">
-                                <app-card-species class="col-md-12 ml-1 mb-6 mt-3 rounded mb-0 tamanho" [specie]="specie" ></app-card-species>
+                                <app-card-species (click)="openModalSpecie(specie)" class="col-md-12 ml-1 mb-6 mt-3 rounded mb-0 tamanho" [specie]="specie" ></app-card-species>
                             </mdb-carousel-item>
                         </mdb-carousel>
                     </div>

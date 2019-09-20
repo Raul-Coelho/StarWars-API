@@ -11,11 +11,10 @@ import { CardSpeciesComponent } from '../Components/card-species/card-species.co
 import { CardVehiclesComponent } from '../Components/card-vehicles/card-vehicles.component';
 import { CardStarshipsComponent } from '../Components/card-starships/card-starships.component';
 import { MatDialogModule } from '@angular/material';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalCharacComponent } from 'src/app/Components/modal-charac/modal-charac.component';
-
-
-
+import { ModalPlanetsComponent } from '../Components/modal-planets/modal-planets.component';
+import { ModalSpeciesComponent } from '../Components/modal-species/modal-species.component';
 
 const routes: Routes = [
   {
@@ -26,7 +25,6 @@ const routes: Routes = [
   }
 ]
 
-
 @NgModule({
   declarations: [
     DetailFilmComponent,
@@ -36,10 +34,12 @@ const routes: Routes = [
     CardVehiclesComponent,
     CardStarshipsComponent,
     ModalCharacComponent,
+    ModalPlanetsComponent,
+    ModalSpeciesComponent,
 
   ],
   imports: [
-  CommonModule,
+    CommonModule,
     RouterModule,
     MatListModule,
     BrowserAnimationsModule,
@@ -47,12 +47,15 @@ const routes: Routes = [
     MDBBootstrapModule.forRoot(),
     RouterModule.forChild(routes)
   ],
-  entryComponents:[
-    ModalCharacComponent
+  entryComponents: [
+    ModalCharacComponent,
+    ModalPlanetsComponent,
+    ModalSpeciesComponent,
+
   ],
   exports: [RouterModule],
-  providers:[
-    
+  providers: [
+
   ]
 })
 

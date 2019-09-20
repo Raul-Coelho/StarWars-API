@@ -17,6 +17,8 @@ import { Vehicle } from '../../Model/Vehicle';
 import Swal from 'sweetalert2'
 import { MDBModalService, MDBModalRef } from 'angular-bootstrap-md';
 import { ModalCharacComponent } from 'src/app/Components/modal-charac/modal-charac.component';
+import { ModalPlanetsComponent } from 'src/app/Components/modal-planets/modal-planets.component';
+import { ModalSpeciesComponent } from '../../Components/modal-species/modal-species.component';
 
 
 @Component({
@@ -71,6 +73,40 @@ export class DetailFilmComponent implements OnInit {
         data: {
           heading: 'Character',
           people: recivedChart      }
+    });
+  }
+
+  openModalPlanet(recivedPlanet:Planet){
+    this.modalRef = this.modalService.show(ModalPlanetsComponent, {
+        backdrop: true,
+        keyboard: true,
+        focus: true,
+        show: false,
+        ignoreBackdropClick: false,
+        class: 'modal-side modal-top-right',
+        containerClass: 'right',
+        animated: true,
+        data: {
+          heading: 'Planet',
+          planet: recivedPlanet      
+        }
+    });
+  }
+
+  openModalSpecie(recivedSpecie:Specie){
+    this.modalRef = this.modalService.show(ModalSpeciesComponent, {
+        backdrop: true,
+        keyboard: true,
+        focus: true,
+        show: false,
+        ignoreBackdropClick: false,
+        class: 'modal-side modal-top-right',
+        containerClass: 'right',
+        animated: true,
+        data: {
+          heading: 'Specie',
+          specie: recivedSpecie      
+        }
     });
   }
 
