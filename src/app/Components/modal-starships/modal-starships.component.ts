@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { Vehicle } from '../../Model/Vehicle';
+import { Starships } from 'src/app/Model/Starships';
 import { MDBModalRef } from 'angular-bootstrap-md';
 import { ConsumeService } from '../../services/consume-filme.service';
 import { ConsumeSpeciesService } from '../../services/consume-species.service';
 import { ConsumeCharactersService } from '../../services/consume-characters.service';
 
 @Component({
-  selector: 'app-modal-vehicles',
-  templateUrl: './modal-vehicles.component.html',
-  styleUrls: ['./modal-vehicles.component.scss']
+  selector: 'app-modal-starships',
+  templateUrl: './modal-starships.component.html',
+  styleUrls: ['./modal-starships.component.scss']
 })
-export class ModalVehiclesComponent implements OnInit {
+export class ModalStarshipsComponent implements OnInit {
 
   heading: string;
-  vehicle:Vehicle[];
+  starship:Starships[];
 
   constructor(
     public modalRef: MDBModalRef,
@@ -23,9 +23,14 @@ export class ModalVehiclesComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    this.serviceFilms.getSpecified(this.vehicle['films']).then(res =>{
-      this.vehicle['films'] = res;
-      console.log(this.vehicle['films'])
+    this.serviceFilms.getSpecified(this.starship['films']).then(res =>{
+      this.starship['films'] = res;
+      console.log(this.starship['films'])
+    })
+
+    this.consumeCharactersService.getCharacters(this.starship['pilots']).then(res =>{
+      this.starship['pilots'] = res;
+      console.log(this.starship['pilots'])
     })
   }
 
