@@ -16,6 +16,7 @@ import { ModalCharacComponent } from 'src/app/Components/modal-charac/modal-char
 import { ModalPlanetsComponent } from '../Components/modal-planets/modal-planets.component';
 import { ModalSpeciesComponent } from '../Components/modal-species/modal-species.component';
 import { ModalVehiclesComponent } from '../Components/modal-vehicles/modal-vehicles.component';
+import { ModalStarshipsComponent } from '../Components/modal-starships/modal-starships.component';
 
 const routes: Routes = [
   {
@@ -38,8 +39,7 @@ const routes: Routes = [
     ModalPlanetsComponent,
     ModalSpeciesComponent,
     ModalVehiclesComponent,
-
-
+    ModalStarshipsComponent,
   ],
   imports: [
     CommonModule,
@@ -55,6 +55,7 @@ const routes: Routes = [
     ModalPlanetsComponent,
     ModalSpeciesComponent,
     ModalVehiclesComponent,
+    ModalStarshipsComponent,
 
   ],
   exports: [RouterModule],

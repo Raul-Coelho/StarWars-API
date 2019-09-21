@@ -15,7 +15,6 @@ import { RouterModule } from '@angular/router';
 import { ListCardComponent } from './pages/list-card/list-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material';
-import { ModalVehiclesComponent } from './Components/modal-vehicles/modal-vehicles.component';
 
 @NgModule({
   declarations: [

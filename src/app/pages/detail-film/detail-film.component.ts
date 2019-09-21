@@ -20,6 +20,7 @@ import { ModalCharacComponent } from 'src/app/Components/modal-charac/modal-char
 import { ModalPlanetsComponent } from 'src/app/Components/modal-planets/modal-planets.component';
 import { ModalSpeciesComponent } from '../../Components/modal-species/modal-species.component';
 import { ModalVehiclesComponent } from 'src/app/Components/modal-vehicles/modal-vehicles.component';
+import { ModalStarshipsComponent } from 'src/app/Components/modal-starships/modal-starships.component';
 
 
 @Component({
@@ -124,6 +125,23 @@ export class DetailFilmComponent implements OnInit {
         data: {
           heading: 'Vehicles',
           vehicle: recivedVehicle      
+        }
+    });
+  }
+
+  openModalStarship(recivedStarship:Starships){
+    this.modalRef = this.modalService.show(ModalStarshipsComponent, {
+        backdrop: true,
+        keyboard: true,
+        focus: true,
+        show: false,
+        ignoreBackdropClick: false,
+        class: 'modal-side modal-top-right',
+        containerClass: 'right',
+        animated: true,
+        data: {
+          heading: 'Vehicles',
+          starship: recivedStarship    
         }
     });
   }
