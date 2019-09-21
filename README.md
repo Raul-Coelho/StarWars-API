@@ -1,7 +1,44 @@
-# MdbAngularFree
+# SW-API with Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.2.
+This project consists of using SW-API, which is an API of the Star Wars Science Fiction Film Series. API development and connection should be done with Angular 8/7 / ...
 
-## Development server
+# Technologies used
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+  - [Angular 8]
+  - [MDB Angular] (Bootstrap 4, Material Design, Material Icons)
+
+
+
+
+
+
+### Installation
+
+Install dependencies within the project page
+
+```sh
+$ cd PROJECT PAGE
+$ npm install
+```
+
+Right after installing npm packages
+
+### Execution
+```sh
+$ cd INSIDE PROJECT PAGE
+$ ng serve
+```
+### Browser Access
+
+In the browser will be accessed the following URL
+
+```sh
+http://localhost:4200/
+```
+Thanks ;)
+
+
+   [MDB Angular]: <https://mdbootstrap.com/docs/angular/>
+   [Angular 8]: <https://angular.io>
+ 
+
