@@ -1,0 +1,31 @@
+<div class="modal-header">
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">×</span>
+    </button>
+    <h4 class="modal-title w-100" id="myModalLabel">{{heading}}</h4>
+  </div>
+  <div class="modal-body">
+    <h6><b>Name:</b> {{ vehicle.name }}</h6>
+    <h6><b>Model:</b> {{ vehicle.model }}</h6>
+    
+    <h6><b>Manufacturer:</b> {{ vehicle.manufacturer }}</h6>
+    <h6 (click)="films.toggle()" >
+      <b>Films</b>
+      <mdb-icon fas icon="angle-down"></mdb-icon>
+    </h6>
+    
+    <div class="" mdbCollapse  #films="bs-collapse">
+      <p *ngFor="let film of vehicle.films"><b>Title:</b> {{film.title}}</p>   
+    </div>
+    <h6><b>Cost in Credits:</b> {{ vehicle.cost_in_credits }}</h6>
+    <h6><b>Length:</b> {{ vehicle.length }}</h6>
+    <h6><b>Max Atmosphering Speed:</b> {{ vehicle.max_atmosphering_speed}}</h6>
+    <h6><b>Crew:</b> {{ vehicle.crew }}</h6>
+    <h6><b>Passengers:</b> {{ vehicle.passengers }}</h6>
+    <h6><b>Cargo Capacity:</b> {{ vehicle.cargo_capacity }}</h6>
+    <h6><b>Consumables:</b> {{ vehicle.consumables }}</h6>
+    <h6><b>Vehicle Class:</b> {{ vehicle.vehicle_class }}</h6>
+  </div>
+  <div class="modal-footer">
+    <button type="button" mdbBtn color="black" class="waves-light" aria-label="Close" (click)="modalRef.hide()" mdbWavesEffect>Close</button>
+  </div>
