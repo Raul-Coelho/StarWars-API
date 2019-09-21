@@ -35,10 +35,15 @@ In the browser will be accessed the following URL
 ```sh
 http://localhost:4200/
 ```
-Thanks ;)
+
+### Route Style (HTML 5 / # HASH)
+In this project we used the URL format / # / because here I don't work with backend connection directly, the HASH format is a way to navigate from page to page. The advantage of this is that it does not require a page refresh.
+
+Thanks ;) , doubts, this is my [twitter].
 
 
    [MDB Angular]: <https://mdbootstrap.com/docs/angular/>
    [Angular 8]: <https://angular.io>
+   [twitter]: <https://twitter.com/Ra_Coelh0>
  
 
