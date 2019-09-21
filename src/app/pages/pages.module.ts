@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalCharacComponent } from 'src/app/Components/modal-charac/modal-charac.component';
 import { ModalPlanetsComponent } from '../Components/modal-planets/modal-planets.component';
 import { ModalSpeciesComponent } from '../Components/modal-species/modal-species.component';
+import { ModalVehiclesComponent } from '../Components/modal-vehicles/modal-vehicles.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,8 @@ const routes: Routes = [
     ModalCharacComponent,
     ModalPlanetsComponent,
     ModalSpeciesComponent,
+    ModalVehiclesComponent,
+
 
   ],
   imports: [
@@ -51,6 +54,7 @@ const routes: Routes = [
     ModalCharacComponent,
     ModalPlanetsComponent,
     ModalSpeciesComponent,
+    ModalVehiclesComponent,
 
   ],
   exports: [RouterModule],

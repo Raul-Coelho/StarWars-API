@@ -19,6 +19,7 @@ import { MDBModalService, MDBModalRef } from 'angular-bootstrap-md';
 import { ModalCharacComponent } from 'src/app/Components/modal-charac/modal-charac.component';
 import { ModalPlanetsComponent } from 'src/app/Components/modal-planets/modal-planets.component';
 import { ModalSpeciesComponent } from '../../Components/modal-species/modal-species.component';
+import { ModalVehiclesComponent } from 'src/app/Components/modal-vehicles/modal-vehicles.component';
 
 
 @Component({
@@ -106,6 +107,23 @@ export class DetailFilmComponent implements OnInit {
         data: {
           heading: 'Specie',
           specie: recivedSpecie      
+        }
+    });
+  }
+
+  openModalVehicles(recivedVehicle:Vehicle){
+    this.modalRef = this.modalService.show(ModalVehiclesComponent, {
+        backdrop: true,
+        keyboard: true,
+        focus: true,
+        show: false,
+        ignoreBackdropClick: false,
+        class: 'modal-side modal-top-right',
+        containerClass: 'right',
+        animated: true,
+        data: {
+          heading: 'Vehicles',
+          vehicle: recivedVehicle      
         }
     });
   }

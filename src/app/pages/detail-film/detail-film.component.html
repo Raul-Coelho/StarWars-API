@@ -62,7 +62,7 @@
                         <h4 class="pr-3 ml-8">Vehicles</h4>
                         <mdb-carousel class="w-100 mb-5" color="black" [animation]="'slide'">
                             <mdb-carousel-item *ngFor="let vehicle of vehicles">
-                                <app-card-vehicles class="col-md-12 ml-1 mb-6 mt-3 rounded mb-0" [vehicle]="vehicle"></app-card-vehicles>
+                                <app-card-vehicles (click)="openModalVehicles(vehicle)" class="col-md-12 ml-1 mb-6 mt-3 rounded mb-0" [vehicle]="vehicle"></app-card-vehicles>
                             </mdb-carousel-item>
                         </mdb-carousel>
                     </div>
