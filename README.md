@@ -39,6 +39,10 @@ http://localhost:4200/
 ### Route Style (HTML 5 / # HASH)
 In this project we used the URL format / # / because here I don't work with backend connection directly, the HASH format is a way to navigate from page to page. The advantage of this is that it does not require a page refresh.
 
+```sh
+http://localhost:4200/#/
+```
+
 Thanks ;) , doubts, this is my [twitter].
 
 
