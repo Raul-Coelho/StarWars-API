@@ -25,7 +25,8 @@ export class ModalVehiclesComponent implements OnInit {
   ngOnInit() {
     this.serviceFilms.getSpecified(this.vehicle['films']).then(res =>{
       this.vehicle['films'] = res;
-      console.log(this.vehicle['films'])
+    }).catch(res =>{
+      console.log
     })
   }
 

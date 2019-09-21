@@ -30,18 +30,22 @@ export class ModalSpeciesComponent implements OnInit {
 
     this.serviceFilms.getSpecified(this.specie['films']).then(res =>{
       this.specie['films'] = res;
-      console.log(this.specie['films'])
+    }).catch(res =>{
+      console.log
     })
 
     this.consumePlanetsService.getSpecified(this.specie['homeworld']).then(res =>{
       this.specie['homeworld'] = res;
-      console.log(this.specie['homeworld'])
+    }).catch(res =>{
+      console.log
     })
 
     this.consumeCharactersService.getCharacters(this.specie['people']).then(res =>{
       this.specie['people'] = res;
-      console.log(this.specie['people'])
+    }).catch(res =>{
+      console.log
     })
+
   }
 
 }

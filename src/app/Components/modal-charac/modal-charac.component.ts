@@ -31,30 +31,33 @@ export class ModalCharacComponent implements OnInit {
   ngOnInit() {
     this.serviceFilms.getSpecified(this.people['films']).then(res =>{
       this.people['films'] = res;
-      console.log(this.people['films'])
+    }).catch(res =>{
+      console.log
     })
 
     this.consumeSpeciesService.getSpecies(this.people['species']).then(res =>{
       this.people['species'] = res;
-      console.log(this.people['species'])
+    }).catch(res =>{
+      console.log
     })
 
     this.consumeStarshipsService.getStarships(this.people['starships']).then(res =>{
       this.people['starships'] = res;
-      console.log(this.people['starships'])
+    }).catch(res =>{
+      console.log
     })
 
 
     this.consumeVehiclesService.getVehicles(this.people['vehicles']).then(res =>{
       this.people['vehicles'] = res;
-      console.log(this.people['vehicles'])
     }).catch(res =>{
       console.log("Não Possui veiculo")
     })
 
     this.consumePlanetsService.getSpecified(this.people['homeworld']).then(res =>{
       this.people['homeworld'] = res;
-      console.log(this.people['homeworld'])
+    }).catch(res =>{
+      console.log
     })
 
 

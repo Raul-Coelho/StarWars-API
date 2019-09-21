@@ -25,12 +25,14 @@ export class ModalStarshipsComponent implements OnInit {
   ngOnInit() {
     this.serviceFilms.getSpecified(this.starship['films']).then(res =>{
       this.starship['films'] = res;
-      console.log(this.starship['films'])
+    }).catch(res =>{
+      console.log
     })
 
     this.consumeCharactersService.getCharacters(this.starship['pilots']).then(res =>{
       this.starship['pilots'] = res;
-      console.log(this.starship['pilots'])
+    }).catch(res =>{
+      console.log
     })
   }
 

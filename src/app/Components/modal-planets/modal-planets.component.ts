@@ -28,13 +28,16 @@ export class ModalPlanetsComponent implements OnInit {
   ngOnInit() {
     this.serviceFilms.getSpecified(this.planet['films']).then(res =>{
       this.planet['films'] = res;
-      console.log(this.planet['films'])
+    }).catch(res =>{
+      console.log
     })
 
     this.consumeCharactersService.getCharacters(this.planet['residents']).then(res =>{
       this.planet['residents'] = res;
-      console.log(this.planet['residents'])
+    }).catch(res =>{
+      console.log
     })
+
   }
 
 }
