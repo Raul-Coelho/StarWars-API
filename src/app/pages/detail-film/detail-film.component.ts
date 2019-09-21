@@ -13,8 +13,6 @@ import { ConsumeStarshipsService } from '../../services/consume-starships.servic
 import { Starships } from '../../Model/Starships';
 import { ConsumeVehiclesService } from 'src/app/services/consume-vehicles.service';
 import { Vehicle } from '../../Model/Vehicle';
-
-import Swal from 'sweetalert2'
 import { MDBModalService, MDBModalRef } from 'angular-bootstrap-md';
 import { ModalCharacComponent } from 'src/app/Components/modal-charac/modal-charac.component';
 import { ModalPlanetsComponent } from 'src/app/Components/modal-planets/modal-planets.component';
