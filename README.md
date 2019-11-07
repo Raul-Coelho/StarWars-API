@@ -14,7 +14,7 @@ This project consists of using SW-API, which is an API of the Star Wars Science 
 
 ### Installation
 
-Install dependencies within the project page
+Install dependencies within the project pages
 
 ```sh
 $ cd PROJECT PAGE
