@@ -1,6 +1,6 @@
 # SW-API with Angular
 
-This project consists of using SW-API, which is an API of the Star Wars Science Fiction Film Series. API development and connection should be done with Angular 8/7 / ...
+This project consists of using SW-API, which is an API of the Star Wars Science Fiction Film Series. API development and connection should be done with Angular 8/7 /..
 
 # Technologies used
 
